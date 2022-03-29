@@ -1,4 +1,4 @@
-
+console.log("js loaded")
 
 
 
@@ -11,7 +11,7 @@
 
 
 const form = document.querySelector('#newsletter-form');
-const form1 = document.querySelector('#review-form');
+
 
 
 
@@ -21,13 +21,9 @@ function handleSubmit(evt) {
 	alert('The Email has been Submitted.');
 }
 
-function handleSubmit1(evt) {
-	evt.preventDefault();
-	
-	alert('The Email has been Submitted.');
-}
+$.ajax({url: "http://localhost:8080/tshirt", success: function(result){
+    console.log(result);
+  }});
 
-
-
-form.addEventListener('submit', handleSubmit);
-form1.addEventListener('submit', handleSubmit1);
+// 
+// form.addEventListener('submit', handleSubmit);
