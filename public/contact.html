@@ -4,19 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
     <title>Document</title>
 </head>
+
+<div class="topnav">
+    <a class="active" href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="review.html">Review</a>
+    <a href="specials.html">Menu</a>
+    <input type="text" placeholder="Search..">
+    <br />
+  
+</div>
 
 <h1>Contact us if you would like us to cater your event</h1>
 
 <form id="contact-form" method="POST" action="/contact">
     <label for="what">What is the event for?</label>
     <br>
-    <input type="text" name="what" value="<%= qs.person %>">
+    <input type="text" name="what" value="">
     <br>
     <label for="for">Is this personal or buisness event?</label>
     <br>
-    <input type="text" name="for" value="<%= qs.for %>">
+    <input type="text" name="for" value=""">
     <br>
     <label for="email"> Your email</label>
     <br>
@@ -24,12 +36,7 @@
     <input type="submit" value="submit" />
 </form>
 
-<ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="menu.html">Menu</a></li>
-    <li><a href="oontact.html">Contact</a></li>
-</ul>
+
 <body>
     
 </body>

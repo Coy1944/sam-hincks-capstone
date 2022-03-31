@@ -3,6 +3,7 @@ const cors = require('cors');
 const path = require('path');
 
 const app = express();
+const {recipe, email} = require("./specialtoday");
 
 app.use(express.json());
 app.use(cors());
@@ -22,9 +23,6 @@ app.use('/', express.static(path.join(__dirname, '../public')));
 app.use('/images', express.static(path.join(__dirname, '../images')));
 
 
-// app.get("/", (req, res) => {
-//     res.sendFile(path.join(__dirname, '../public/index.html'));
-// });
 
 
 const PORT = process.env.PORT || 8080
@@ -36,26 +34,20 @@ app.listen(
     () => console.log(`its running on http://localhost:${PORT}`)
 )
 
-app.get('/tshirt', (req, res) => {
-    res.status(200).send({
-        tshirt: 'orange',
-        size: 'large'
-    })
+app.get('/special', (req, res) => {
+    res.status(200).send(recipe)
 
 });
 
-app.post('/tshirt/:id', (req, res) => {
+app.post('/special', (req, res) => {
 
-    const { id } = req.params;
-    const { logo } = req.body;
+    // const { id } = req.params;
+    // email.list.push(req.body);
+    console.log(req.body);
 
-    if (!logo) {
-        res.status(418).send({ message: 'We need a logo'})
-    }
+   
 
-    res.send({
-        tshirt: `orange with your ${logo} and ID of ${id}`,
-    });
+    res.send();
 });
 
 

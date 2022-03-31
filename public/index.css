@@ -1,5 +1,5 @@
 body {
-    background-color: #FDDBC3;
+    background-color: #FDDBC3!important;
   }
 h1 {
     text-align: center;
@@ -77,4 +77,8 @@ h1 {
       text-align: left;
       padding: 5px;
       margin: 0px;
+  }
+
+  .button-size {
+    width: fit-content;
   }
